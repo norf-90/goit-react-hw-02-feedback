@@ -1,25 +1,26 @@
 import PropTypes from 'prop-types';
 import { GrDislike, GrLike } from 'react-icons/gr';
 import { BsEmojiNeutralFill } from 'react-icons/bs';
-
+import { IconContext } from 'react-icons';
+import css from './FeedbackOptions.module.css';
 const FeedbackOptions = ({
   onLeaveFeedback: { increaseGood, increaseBad, increaseNeutral },
 }) => {
   return (
-    <>
-      <button onClick={increaseGood}>
-        <GrDislike />
-        <span>Good</span>
+    <div className={css.btnWrapper}>
+      <button className={css.btn} onClick={increaseGood}>
+        <GrDislike size="20" />
+        <span className={css.btnText}>Good</span>
       </button>
-      <button onClick={increaseNeutral}>
-        <BsEmojiNeutralFill />
-        <span>Neutral</span>
+      <button className={css.btn} onClick={increaseNeutral}>
+        <BsEmojiNeutralFill fill="#005247" size="20" />
+        <span className={css.btnText}>Neutral</span>
       </button>
-      <button onClick={increaseBad}>
-        <GrLike />
-        <span>Bad</span>
+      <button className={css.btn} onClick={increaseBad}>
+        <GrLike size="20" />
+        <span className={css.btnText}>Bad</span>
       </button>
-    </>
+    </div>
   );
 };
 
