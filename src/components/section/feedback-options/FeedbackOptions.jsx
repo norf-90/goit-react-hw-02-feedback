@@ -8,7 +8,7 @@ const FeedbackOptions = ({
   return (
     <div className={css.btnWrapper}>
       <button className={css.btn} onClick={increaseGood}>
-        <GrDislike size="20" />
+        <GrLike size="20" />
         <span className={css.btnText}>Good</span>
       </button>
       <button className={css.btn} onClick={increaseNeutral}>
@@ -16,7 +16,7 @@ const FeedbackOptions = ({
         <span className={css.btnText}>Neutral</span>
       </button>
       <button className={css.btn} onClick={increaseBad}>
-        <GrLike size="20" />
+        <GrDislike size="20" />
         <span className={css.btnText}>Bad</span>
       </button>
     </div>
