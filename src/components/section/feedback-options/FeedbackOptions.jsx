@@ -11,10 +11,12 @@ const FeedbackOptions = ({
         <GrLike size="20" />
         <span className={css.btnText}>Good</span>
       </button>
+
       <button className={css.btn} onClick={increaseNeutral}>
         <BsEmojiNeutralFill fill="#005247" size="20" />
         <span className={css.btnText}>Neutral</span>
       </button>
+
       <button className={css.btn} onClick={increaseBad}>
         <GrDislike size="20" />
         <span className={css.btnText}>Bad</span>
